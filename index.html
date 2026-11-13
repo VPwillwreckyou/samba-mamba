@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>Samba &amp; Mamba — Five Of A Kind</title>
+<meta name="description" content="Samba & Mamba — premium cannabis brand. Five Of A Kind, Four Of A Kind, Samba7, Mamba7, MIT Tabs, Double Stack Hummy & THC Disposables." />
+<link rel="icon" href="data:," />
+<link rel="stylesheet" href="style.css" />
+
+<!-- Import map: latest Three.js ES modules + addons (OrbitControls, Bloom postprocessing) -->
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+
+  <!-- ============ AGE VERIFICATION GATE ============ -->
+  <div id="age-gate">
+    <div class="age-gate__glow age-gate__glow--a"></div>
+    <div class="age-gate__glow age-gate__glow--b"></div>
+
+    <div class="age-gate__card">
+      <div class="age-gate__logo">samba<span>&amp;</span>mamba</div>
+      <h1 class="age-gate__title">Are you 21 or older?</h1>
+      <p class="age-gate__copy">
+        This site features cannabis products intended only for adults 21+.
+        By entering, you confirm you are of legal age in your jurisdiction.
+      </p>
+      <div class="age-gate__actions">
+        <button id="age-yes" class="btn btn--primary">I'm 21+ — Enter</button>
+        <button id="age-no" class="btn btn--ghost">I'm under 21</button>
+      </div>
+      <p class="age-gate__legal">Please enjoy responsibly. Keep out of reach of children and pets.</p>
+    </div>
+  </div>
+
+  <!-- ============ DENIED SCREEN ============ -->
+  <div id="denied" class="hidden">
+    <div class="denied__card">
+      <div class="age-gate__logo">samba<span>&amp;</span>mamba</div>
+      <h2>Come back when you're 21+</h2>
+      <p>Sorry, you must meet the legal age requirement to view this site.</p>
+    </div>
+  </div>
+
+  <!-- ============ MAIN EXPERIENCE ============ -->
+  <div id="app" class="hidden">
+
+    <canvas id="scene"></canvas>
+
+    <!-- Top navigation -->
+    <header class="topbar">
+      <div class="logo">samba<span>&amp;</span>mamba</div>
+      <a class="btn btn--shop" href="https://sambabrand.com" target="_blank" rel="noopener">Shop Now</a>
+    </header>
+
+    <!-- Hero text -->
+    <section class="hero" id="hero">
+      <span class="hero__eyebrow">Premium Cannabis · Handcrafted Drops</span>
+      <h1 class="hero__title">FIVE&nbsp;OF&nbsp;A&nbsp;KIND</h1>
+      <p class="hero__subtitle">Drag to explore the collection · Scroll to zoom</p>
+      <div class="hero__scroll-cue"><span></span></div>
+    </section>
+
+    <!-- Product info glass panel -->
+    <aside id="info-panel" class="info-panel hidden">
+      <button id="info-close" class="info-panel__close" aria-label="Close">&times;</button>
+      <div class="info-panel__tag" id="info-tag">Category</div>
+      <h2 class="info-panel__title" id="info-title">Product Name</h2>
+      <p class="info-panel__desc" id="info-desc">Description goes here.</p>
+      <a id="info-cta" class="btn btn--primary btn--full" href="https://sambabrand.com" target="_blank" rel="noopener">View on sambabrand.com</a>
+    </aside>
+
+    <!-- Bottom hint -->
+    <div class="bottom-hint">Click a package to learn more</div>
+
+    <div id="loading" class="loading">
+      <div class="loading__logo">samba<span>&amp;</span>mamba</div>
+      <div class="loading__bar"><div class="loading__bar-fill"></div></div>
+    </div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>

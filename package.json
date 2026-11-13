@@ -1,0 +1,11 @@
+{
+  "name": "samba-mamba-3d-site",
+  "version": "1.0.0",
+  "description": "Immersive 3D Three.js landing site for Samba & Mamba",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "license": "UNLICENSED",
+  "private": true
+}
